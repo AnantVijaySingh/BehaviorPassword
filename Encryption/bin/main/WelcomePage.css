@@ -1,0 +1,28 @@
+.root{
+    -fx-background-color:#fdfdfd
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: rgb(150, 137, 255);
+}
+
+.button:hover {
+    -fx-background-color:#1100db;
+}
+
+#welcome-text{
+   -fx-font-size: 19px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #401877;
+   
+}
+
+.label{
+    -fx-text-fill: #080043;
+	-fx-font-family: "Arial Narrow";
+	-fx-font-weight: normal;
+	/*-fx-background-color: #080043;*/
+} 
