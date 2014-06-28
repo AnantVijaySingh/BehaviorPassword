@@ -12,6 +12,7 @@ import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
@@ -24,6 +25,7 @@ public class UserInterface extends Application {
 	
 	Scene scene;
 	Stage mainStage;
+	KeyStrokes keyStrokeObject = new KeyStrokes();
 	public static void main(String[] args) {
 		launch(args);
 
@@ -103,6 +105,14 @@ public class UserInterface extends Application {
 		PasswordField practicePassword = new PasswordField();
 		PasswordField enterPassword = new PasswordField();
 		PasswordField enterPassword2 = new PasswordField();
+		
+		enterPassword.setOnKeyTyped(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent t){
+				String p = t.getCharacter();
+				keyStrokeObject.passwordCapture(p);
+			}
+		});
 		
 		Label userN = new Label("User Name");
 		Label practiceP = new Label("Practice Password");
